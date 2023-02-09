@@ -72,6 +72,7 @@ def create_item(item_id: int,item: Item):
 # def get_item(item_id: int, name: str=None): 
 #     return inventory[item_id]
 
+#to update an item
 @app.put("/update-item/{item_id}")
 def update_item(item_id: int, item: UpdateItem):
     if item_id not in inventory:
