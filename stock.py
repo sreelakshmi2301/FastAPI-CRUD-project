@@ -57,6 +57,7 @@ def get_item(name: str = Query(None, title="Name", description="Name of item.", 
             return inventory[item_id]
     return {"Data":"Not found"}
 
+#to create an item
 @app.post("/create-item/{item_id}")
 def create_item(item_id: int,item: Item):
     if item_id in inventory:
